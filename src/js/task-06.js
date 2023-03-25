@@ -12,12 +12,29 @@
 // Для додавання стилів використовуй CSS-класи valid і invalid, які ми вже додали у вихідні файли завдання.
 
 const input = document.querySelector('#validation-input')
+// input.addEventListener('blur', () => {
+    
+//     input.classList.remove('invalid');
+//     input.classList.remove('valid');
+
+//     if (input.value.length !== +input.dataset.length) {
+//         input.classList.add('invalid')
+//     } else (input.classList.add('valid'))
+// })
+
+function addValidClass(a, b) {
+    input.classList.remove('invalide');
+    input.classList.add('valid');
+}
+function addInvalidClass(a, b) {
+    input.classList.remove('valide');
+    input.classList.add('invalid');
+}
 input.addEventListener('blur', () => {
     
-    input.classList.remove('invalid');
-    input.classList.remove('valid');
+    addValidClass();
 
     if (input.value.length !== +input.dataset.length) {
-        input.classList.add('invalid')
-    } else (input.classList.add('valid'))
+        addInvalidClass(b)
+    } else (addInvalidClass(a))
 })

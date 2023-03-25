@@ -9,7 +9,7 @@ const userNameInput = document.querySelector('#name-input');
 
 userNameInput.addEventListener('input',
     () => {
-        if (userNameInput.value === "") {
+        if (userNameInput.value.trim() === "") {
             userNameResult.textContent = "Anonymous"
         } else (userNameResult.textContent = userNameInput.value);
     })
